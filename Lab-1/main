@@ -9,8 +9,8 @@ cap_loop
 	CMP   r3, #'Z'    // Compare it with the 'Z' character
 	BHI   cap_numcheck    // If it is higher, then skip this byte
 	
-	SUBS  r3,#65      // Else subtract out difference to find the desired index of the buff array
-	LDR		r4, [r2,r3, LSL#2] //We access the element of the array based on the given index
+	SUBS  r3,#65	// Else subtract out difference to find the desired index of the buff array
+	LDR   r4, [r2,r3, LSL#2] //We access the element of the array based on the given index
 	
 	LDR r5,[r1,#0]	//Here we calculate our hash variable by adding the value of the above element
 	ADDS r5, r5, r4
