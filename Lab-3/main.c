@@ -15,7 +15,7 @@
 int period = 2;		//An timer interrupt will occur every period seconds.
 int count = 0;		//How many times the timer_callback_isr is called
 int period_counter = 0;
-char buff[BUFF_SIZE];		//Necessary address space for the display through uart
+char buff[BUFF_SIZE];	//Necessary address space for the display through uart
 
 /********Functions for creating delay in milisecond and in microseconds as well.*******************/
 void delay_ms(unsigned int ms);
@@ -72,7 +72,7 @@ uint8_t Presence = 0;
 #define DHT11_PIN PA_1
 
 void DHT11_Start(void){
-	gpio_set_mode(DHT11_PIN, Output);		// set the pin as output
+	gpio_set_mode(DHT11_PIN, Output);	// set the pin as output
 	gpio_set(DHT11_PIN, 0);		// set the pin low
 	delay_us(18000);		// wait for 18ms 
 	gpio_set(DHT11_PIN,1);		// set the pin high
@@ -127,7 +127,7 @@ float Read_data(){
 		Rh_byte2 = DHT11_Read();		//Next 8bit are decimal Humidity data
 		temp_byte1 = DHT11_Read(); 		//next 8bit are integral Temperature data
 		temp_byte2 = DHT11_Read();		//Next 8bit are decimal Temperature data
-		SUM = DHT11_Read();				//Last 8 bits are the checksum
+		SUM = DHT11_Read();			//Last 8 bits are the checksum
 		
 		TEMP = temp_byte1;
 		RH = Rh_byte1;
@@ -172,7 +172,7 @@ void button_press_isr(int sources) {
 				period = 4;
 				timer_init(CF);		//Changing the period of the timer interrupt
 			}
-			else{					// The count is an odd number
+			else{				// The count is an odd number
 				period = 3;
 				timer_init(CF);		//Changing the period of the timer interrupt
 			}
