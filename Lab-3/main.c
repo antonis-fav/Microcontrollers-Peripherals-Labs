@@ -164,7 +164,7 @@ void button_press_isr(int sources) {
 	if ((sources << GET_PIN_INDEX(P_SW)) & (1 << GET_PIN_INDEX(P_SW))) {
 		
 		if(count == 0){
-			period = 12;		// AEM:8675 so the add of the last 2 digits is 12
+			period = 12;		// AEM:9684 so the add of the last 2 digits is 12
 			timer_init(CF);
 		}
 		else{
