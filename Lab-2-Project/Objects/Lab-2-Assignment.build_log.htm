@@ -1,0 +1,581 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Antonis Favvas, Aristotle Univerisy of Thessaloniki, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.164.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\tonis\Desktop\Lab-2-Project\Lab-2-Assignment.uvprojx
+Project File Date:  08/27/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling queue.c...
+Drivers/comparator.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/comparator.c(2): warning: In file included from...
+./Drivers\comparator.h(6): warning: In file included from...
+./Drivers\adc.h(10): warning: 'ADC1_BASE' macro redefined [-Wmacro-redefined]
+#define ADC1_BASE             (APB2PERIPH_BASE + 0x2000)
+        ^
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(678): note: previous definition is here
+#define ADC1_BASE             (APB2PERIPH_BASE + 0x2000UL)
+        ^
+Drivers/comparator.c(2): warning: In file included from...
+./Drivers\comparator.h(6): warning: In file included from...
+./Drivers\adc.h(23): warning: 'GPIOA_BASE' macro redefined [-Wmacro-redefined]
+#define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000)
+        ^
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(692): note: previous definition is here
+#define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
+        ^
+Drivers/comparator.c(2): warning: In file included from...
+./Drivers\comparator.h(6): warning: In file included from...
+./Drivers\adc.h(251): warning: unused function 'local_ADC_Init' [-Wunused-function]
+static void local_ADC_Init(ADC_HandleTypeDef* hadc);
+            ^
+4 warnings generated.
+compiling comparator.c...
+Drivers/leds.c(1): warning: In file included from...
+./Drivers/platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/leds.c(17): warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+        gpio_set(P_LED_R, !red_on!=LED_ON);
+                          ^      ~~
+Drivers/leds.c(17): note: add parentheses after the '!' to evaluate the comparison first
+        gpio_set(P_LED_R, !red_on!=LED_ON);
+                          ^
+                           (             )
+Drivers/leds.c(17): note: add parentheses around left hand side expression to silence this warning
+        gpio_set(P_LED_R, !red_on!=LED_ON);
+                          ^
+                          (      )
+Drivers/leds.c(18): warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+        gpio_set(P_LED_G, !green_on!=LED_ON);
+                          ^        ~~
+Drivers/leds.c(18): note: add parentheses after the '!' to evaluate the comparison first
+        gpio_set(P_LED_G, !green_on!=LED_ON);
+                          ^
+                           (               )
+Drivers/leds.c(18): note: add parentheses around left hand side expression to silence this warning
+        gpio_set(P_LED_G, !green_on!=LED_ON);
+                          ^
+                          (        )
+Drivers/leds.c(19): warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+        gpio_set(P_LED_B, !blue_on!=LED_ON);
+                          ^       ~~
+Drivers/leds.c(19): note: add parentheses after the '!' to evaluate the comparison first
+        gpio_set(P_LED_B, !blue_on!=LED_ON);
+                          ^
+                           (              )
+Drivers/leds.c(19): note: add parentheses around left hand side expression to silence this warning
+        gpio_set(P_LED_B, !blue_on!=LED_ON);
+                          ^
+                          (       )
+4 warnings generated.
+compiling leds.c...
+Drivers/i2c.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/i2c.c(3): warning: non-portable path to file '<stm32f4xx_rcc.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx_RCC.h>
+         ^~~~~~~~~~~~~~~~~
+         <stm32f4xx_rcc.h>
+Drivers/i2c.c(4): warning: non-portable path to file '<stm32f4xx_i2c.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx_I2C.h>
+         ^~~~~~~~~~~~~~~~~
+         <stm32f4xx_i2c.h>
+Drivers/i2c.c(5): warning: non-portable path to file '<stm32f4xx_gpio.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx_GPIO.h>
+         ^~~~~~~~~~~~~~~~~~
+         <stm32f4xx_gpio.h>
+Drivers/i2c.c(2): warning: In file included from...
+./Drivers\STM32F4xx_I2C.h(48): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Drivers/i2c.c(7): warning: no previous prototype for function 'i2c_init' [-Wmissing-prototypes]
+void i2c_init() {
+     ^
+Drivers/i2c.c(7): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_init() {
+^
+static 
+Drivers/i2c.c(7): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void i2c_init() {
+             ^
+Drivers/i2c.c(35): warning: no previous prototype for function 'i2c_write' [-Wmissing-prototypes]
+void i2c_write(uint8_t address, uint8_t *buffer, int buff_len) {
+     ^
+Drivers/i2c.c(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_write(uint8_t address, uint8_t *buffer, int buff_len) {
+^
+static 
+Drivers/i2c.c(64): warning: no previous prototype for function 'i2c_read' [-Wmissing-prototypes]
+void i2c_read(uint8_t address, uint8_t *buffer, int buff_len) {
+     ^
+Drivers/i2c.c(64): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_read(uint8_t address, uint8_t *buffer, int buff_len) {
+^
+static 
+9 warnings generated.
+compiling i2c.c...
+main.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+main.c(20): warning: no previous prototype for function 'uart_rx_isr' [-Wmissing-prototypes]
+void uart_rx_isr(uint8_t rx) {
+     ^
+main.c(20): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void uart_rx_isr(uint8_t rx) {
+^
+static 
+main.c(28): warning: no previous prototype for function 'button_press_isr' [-Wmissing-prototypes]
+void button_press_isr(int sources) {
+     ^
+main.c(28): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void button_press_isr(int sources) {
+^
+static 
+main.c(15): warning: no previous extern declaration for non-static variable 'b' [-Wmissing-variable-declarations]
+int b, count;
+    ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int b, count;
+^
+main.c(15): warning: no previous extern declaration for non-static variable 'count' [-Wmissing-variable-declarations]
+int b, count;
+       ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int b, count;
+^
+main.c(17): warning: no previous extern declaration for non-static variable 'rx_queue' [-Wmissing-variable-declarations]
+Queue rx_queue;
+      ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+Queue rx_queue;
+^
+6 warnings generated.
+compiling main.c...
+Drivers/gpio.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/gpio.c(25): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_TypeDef* p = GET_PORT(pin);
+                          ^~~~~~~~~~~~~
+./Drivers\platform.h(157): note: expanded from macro 'GET_PORT'
+#define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+                                                       ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+Drivers/gpio.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        MODIFY_REG(p->ODR,1UL<<pin_index,value<<pin_index);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(224): note: expanded from macro 'MODIFY_REG'
+#define MODIFY_REG(REG, CLEARMASK, SETMASK)  WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))
+                                                                                                  ~  ^~~~~~~
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(220): note: expanded from macro 'WRITE_REG'
+#define WRITE_REG(REG, VAL)   ((REG) = (VAL))
+                                        ^~~
+Drivers/gpio.c(34): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_TypeDef* p = GET_PORT(pin);
+                          ^~~~~~~~~~~~~
+./Drivers\platform.h(157): note: expanded from macro 'GET_PORT'
+#define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+                                                       ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+Drivers/gpio.c(37): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        return READ_BIT(p->IDR,(1<<pin_index));
+        ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(216): note: expanded from macro 'READ_BIT'
+#define READ_BIT(REG, BIT)    ((REG) & (BIT))
+                               ~~~~~~^~~~~~~
+Drivers/gpio.c(53): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+  GPIO_TypeDef* p = GET_PORT(pin_base);
+                    ^~~~~~~~~~~~~~~~~~
+./Drivers\platform.h(157): note: expanded from macro 'GET_PORT'
+#define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+                                                       ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+Drivers/gpio.c(56): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        MODIFY_REG(p->ODR,((1UL<<count)-1)<<pin_index,value<<pin_index);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(224): note: expanded from macro 'MODIFY_REG'
+#define MODIFY_REG(REG, CLEARMASK, SETMASK)  WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))
+                                                                                                  ~  ^~~~~~~
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(220): note: expanded from macro 'WRITE_REG'
+#define WRITE_REG(REG, VAL)   ((REG) = (VAL))
+                                        ^~~
+Drivers/gpio.c(74): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_TypeDef* p = GET_PORT(pin_base);
+                          ^~~~~~~~~~~~~~~~~~
+./Drivers\platform.h(157): note: expanded from macro 'GET_PORT'
+#define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+                                                       ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+Drivers/gpio.c(77): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        return READ_BIT(p->IDR,(((1 << count) - 1)<<pin_index))>>pin_index;
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(216): note: expanded from macro 'READ_BIT'
+#define READ_BIT(REG, BIT)    ((REG) & (BIT))
+                                     ~  ^~~
+Drivers/gpio.c(99): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        GPIO_TypeDef* p = GET_PORT(pin);
+                          ^~~~~~~~~~~~~
+./Drivers\platform.h(157): note: expanded from macro 'GET_PORT'
+#define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+                                                       ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+Drivers/gpio.c(154): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        EXTI->PR        &= (0<<pin_index);
+                                        ~~  ~^~~~~~~~~~~
+Drivers/gpio.c(177): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        IRQ_port_num = GET_PORT_INDEX(pin);
+                     ~ ^~~~~~~~~~~~~~~~~~~
+./Drivers\platform.h(145): note: expanded from macro 'GET_PORT_INDEX'
+#define GET_PORT_INDEX(pin) ((pin) >> 16)
+                             ~~~~~~^~~~~
+Drivers/gpio.c(274): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(266): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+void EXTI0_IRQHandler(void){
+     ^
+Drivers/gpio.c(266): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI0_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(286): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(278): warning: no previous prototype for function 'EXTI1_IRQHandler' [-Wmissing-prototypes]
+void EXTI1_IRQHandler(void){
+     ^
+Drivers/gpio.c(278): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI1_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(299): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(291): warning: no previous prototype for function 'EXTI2_IRQHandler' [-Wmissing-prototypes]
+void EXTI2_IRQHandler(void){
+     ^
+Drivers/gpio.c(291): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI2_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(312): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(304): warning: no previous prototype for function 'EXTI3_IRQHandler' [-Wmissing-prototypes]
+void EXTI3_IRQHandler(void){
+     ^
+Drivers/gpio.c(304): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI3_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(325): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(317): warning: no previous prototype for function 'EXTI4_IRQHandler' [-Wmissing-prototypes]
+void EXTI4_IRQHandler(void){
+     ^
+Drivers/gpio.c(317): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI4_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(337): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(329): warning: no previous prototype for function 'EXTI9_5_IRQHandler' [-Wmissing-prototypes]
+void EXTI9_5_IRQHandler(void){
+     ^
+Drivers/gpio.c(329): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI9_5_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(350): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                GPIO_callback(IRQ_pin_index);
+                ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+Drivers/gpio.c(342): warning: no previous prototype for function 'EXTI15_10_IRQHandler' [-Wmissing-prototypes]
+void EXTI15_10_IRQHandler(void){
+     ^
+Drivers/gpio.c(342): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI15_10_IRQHandler(void){
+^
+static 
+Drivers/gpio.c(4): warning: no previous extern declaration for non-static variable 'IRQ_status' [-Wmissing-variable-declarations]
+uint32_t IRQ_status;
+         ^
+Drivers/gpio.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t IRQ_status;
+^
+Drivers/gpio.c(5): warning: no previous extern declaration for non-static variable 'IRQ_port_num' [-Wmissing-variable-declarations]
+uint32_t IRQ_port_num;
+         ^
+Drivers/gpio.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t IRQ_port_num;
+^
+Drivers/gpio.c(6): warning: no previous extern declaration for non-static variable 'IRQ_pin_index' [-Wmissing-variable-declarations]
+uint32_t IRQ_pin_index;
+         ^
+Drivers/gpio.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t IRQ_pin_index;
+^
+Drivers/gpio.c(7): warning: no previous extern declaration for non-static variable 'EXTI_port_set' [-Wmissing-variable-declarations]
+uint32_t EXTI_port_set;
+         ^
+Drivers/gpio.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t EXTI_port_set;
+^
+Drivers/gpio.c(8): warning: no previous extern declaration for non-static variable 'prioritygroup' [-Wmissing-variable-declarations]
+uint32_t prioritygroup;
+         ^
+Drivers/gpio.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t prioritygroup;
+^
+Drivers/gpio.c(9): warning: no previous extern declaration for non-static variable 'priority' [-Wmissing-variable-declarations]
+uint32_t priority;
+         ^
+Drivers/gpio.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t priority;
+^
+32 warnings generated.
+compiling gpio.c...
+Drivers/adc.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/adc.c(3): warning: In file included from...
+./Drivers\adc.h(10): warning: 'ADC1_BASE' macro redefined [-Wmacro-redefined]
+#define ADC1_BASE             (APB2PERIPH_BASE + 0x2000)
+        ^
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(678): note: previous definition is here
+#define ADC1_BASE             (APB2PERIPH_BASE + 0x2000UL)
+        ^
+Drivers/adc.c(3): warning: In file included from...
+./Drivers\adc.h(23): warning: 'GPIOA_BASE' macro redefined [-Wmacro-redefined]
+#define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000)
+        ^
+C:/Users/tonis/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(692): note: previous definition is here
+#define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
+        ^
+Drivers/adc.c(7): warning: no previous extern declaration for non-static variable 'PinMap_ADC' [-Wmissing-variable-declarations]
+const PinMap PinMap_ADC[] = {
+             ^
+Drivers/adc.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const PinMap PinMap_ADC[] = {
+      ^
+Drivers/adc.c(3): warning: In file included from...
+./Drivers\adc.h(220): warning: padding size of 'analogin_s' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+Drivers/adc.c(67): warning: 35 enumeration values not explicitly handled in switch: 'NC', 'PA_8', 'PA_9'... [-Wswitch-enum]
+        switch (pin)
+                ^
+Drivers/adc.c(145): warning: implicit conversion changes signedness: 'const int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+            return map->peripheral;
+            ~~~~~~ ~~~~~^~~~~~~~~~
+Drivers/adc.c(167): warning: cast from function call of type 'uint32_t' (aka 'unsigned int') to non-matching type 'ADCName' [-Wbad-function-cast]
+                obj->adc = (ADCName)pinmap_peripheral(pin);    
+                                    ^~~~~~~~~~~~~~~~~~~~~~
+Drivers/adc.c(3): warning: In file included from...
+./Drivers\adc.h(180): warning: padding struct 'ADC_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
+  __IO uint32_t                 ErrorCode;                   /*!< ADC Error code */
+                                ^
+Drivers/adc.c(309): warning: implicit conversion changes signedness: 'const int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+            return map->function;
+            ~~~~~~ ~~~~~^~~~~~~~
+Drivers/adc.c(305): warning: no previous prototype for function 'pinmap_find_function' [-Wmissing-prototypes]
+uint32_t pinmap_find_function(Pin pin) {
+         ^
+Drivers/adc.c(305): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint32_t pinmap_find_function(Pin pin) {
+^
+static 
+Drivers/adc.c(421): warning: 35 enumeration values not explicitly handled in switch: 'NC', 'PA_8', 'PA_9'... [-Wswitch-enum]
+        switch (pin)
+                ^
+Drivers/adc.c(546): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        return (_ADC_GetValue(&AdcHandle));
+        ~~~~~~  ^~~~~~~~~~~~~~~~~~~~~~~~~
+Drivers/adc.c(5): warning: no previous extern declaration for non-static variable 'AdcHandle' [-Wmissing-variable-declarations]
+ADC_HandleTypeDef AdcHandle;
+                  ^
+Drivers/adc.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+ADC_HandleTypeDef AdcHandle;
+^
+14 warnings generated.
+compiling adc.c...
+Drivers/stm32f4xx_adc.c(98): warning: In file included from...
+./Drivers/stm32f4xx_adc.h(58): warning: padding struct 'ADC_InitTypeDef' with 2 bytes to align 'ADC_ExternalTrigConvEdge' [-Wpadded]
+  uint32_t ADC_ExternalTrigConvEdge;      /*!< Select the external trigger edge and
+           ^
+./Drivers/stm32f4xx_adc.h(47): warning: padding size of 'ADC_InitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+2 warnings generated.
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_gpio.c...
+Drivers/stm32f4xx_i2c.c(192): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmpreg = I2Cx->CR2;
+         ~ ~~~~~~^~~
+Drivers/stm32f4xx_i2c.c(264): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmpreg = I2Cx->CR1;
+         ~ ~~~~~~^~~
+Drivers/stm32f4xx_i2c.c(87): warning: In file included from...
+./Drivers/stm32f4xx_i2c.h(48): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Drivers/stm32f4xx_i2c.c(442): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmpreg = I2Cx->OAR2;
+         ~ ~~~~~~^~~~
+Drivers/stm32f4xx_i2c.c(815): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  return ((I2Cx->SR2) >> 8);
+  ~~~~~~  ~~~~~~~~~~~~^~~~
+5 warnings generated.
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_rcc.c...
+Drivers/stm32f4xx_usart.c(86): warning: In file included from...
+./Drivers/stm32f4xx_usart.h(48): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Drivers/stm32f4xx_usart.c(434): warning: unused parameter 'USARTx' [-Wunused-parameter]
+void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler)
+                                       ^
+Drivers/stm32f4xx_usart.c(434): warning: unused parameter 'USART_Prescaler' [-Wunused-parameter]
+void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler)
+                                                       ^
+Drivers/stm32f4xx_usart.c(1443): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  itmask = ((uint16_t)0x01 << (uint16_t)bitpos);
+         ~  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+compiling stm32f4xx_usart.c...
+Drivers/timer.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/timer.c(15): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+                uint32_t tick_us = (SystemCoreClock)/1e6;
+                         ~~~~~~~   ~~~~~~~~~~~~~~~~~^~~~
+Drivers/timer.c(45): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+Drivers/timer.c(45): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+Drivers/timer.c(4): warning: no previous extern declaration for non-static variable 'timer_period' [-Wmissing-variable-declarations]
+uint32_t timer_period;
+         ^
+Drivers/timer.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t timer_period;
+^
+4 warnings generated.
+compiling timer.c...
+Drivers/uart.c(1): warning: In file included from...
+./Drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+Drivers/uart.c(3): warning: non-portable path to file '<stm32f4xx_rcc.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx_RCC.h>
+         ^~~~~~~~~~~~~~~~~
+         <stm32f4xx_rcc.h>
+Drivers/uart.c(4): warning: non-portable path to file '<stm32f4xx_usart.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx_USART.h>
+         ^~~~~~~~~~~~~~~~~~~
+         <stm32f4xx_usart.h>
+Drivers/uart.c(5): warning: non-portable path to file '<stm32f4xx_gpio.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx_GPIO.h>
+         ^~~~~~~~~~~~~~~~~~
+         <stm32f4xx_gpio.h>
+Drivers/uart.c(4): warning: In file included from...
+./Drivers\STM32F4xx_USART.h(48): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Drivers/uart.c(89): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return Data;
+        ~~~~~~ ^~~~
+Drivers/uart.c(92): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+void USART2_IRQHandler(void){
+     ^
+Drivers/uart.c(92): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART2_IRQHandler(void){
+^
+static 
+7 warnings generated.
+compiling uart.c...
+compiling retarget_io.c...
+assembling startup_stm32f401xe.s...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=6866 RO-data=950 RW-data=0 ZI-data=1696  
+".\Objects\Lab-2-Assignment.axf" - 0 Error(s), 91 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.ARM_Compiler.1.7.1.pack
+                Keil.ARM_Compiler.1.7.1
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: STDOUT Variant: ITM Version: 1.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\tonis\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\tonis\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDOUT:ITM:1.2.0
+      Source file:   Source\retarget_io.c
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
